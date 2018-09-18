@@ -1,0 +1,390 @@
+nina@nina-HP-ProBook-430-G2:~$ git init
+Reinitialized existing Git repository in /home/nina/.git/
+nina@nina-HP-ProBook-430-G2:~$ cd
+nina@nina-HP-ProBook-430-G2:~$ ls
+2годвспер.R	   M2				 R-3.2.2
+a.txt		   M3				 readme.md
+bin		   M4				 Rplot.svg
+d.csv		   M5				 second
+Desktop		   maffit			 SPAdes-3.6.1-Linux
+Documents	   mafft-7.294-with-extensions	 Templates
+Downloads	   Mesquite_Folder		 test.txt
+d.xls		   Mesquite_Support_Files	 Third
+file.txt	   mrbayes-3.2.6		 Venn_2set_simple.tiff
+first		   Music			 Videos
+Fourth		   my_first_project		 WT
+Fourth.svg	   myproject			 Видео
+Fourtrrh.svg	   opt				 Документы
+funs.R		   Pictures			 Загрузки
+Gblocks_0.91b	   PlayOnLinux's virtual drives  Изображения
+Homework	   Public			 Музыка
+igv		   PycharmProjects		 Общедоступные
+ImageJ		   pythoscope			 Рабочий стол
+jmodeltest-2.1.10  quast-3.2			 Шаблоны
+M1		   R
+nina@nina-HP-ProBook-430-G2:~$ cd myproject
+nina@nina-HP-ProBook-430-G2:~/myproject$ git init
+Reinitialized existing Git repository in /home/nina/myproject/.git/
+nina@nina-HP-ProBook-430-G2:~/myproject$ cd myproject/Homework
+bash: cd: myproject/Homework: No such file or directory
+nina@nina-HP-ProBook-430-G2:~/myproject$ cd myproject/homework
+bash: cd: myproject/homework: No such file or directory
+nina@nina-HP-ProBook-430-G2:~/myproject$ ls
+de851fcffdeb1ec0a6692b760680fba8-b4e78dc3439e722e53eb98a553df5c1cac59e02c
+Homework
+nina@nina-HP-ProBook-430-G2:~/myproject$ Homework
+Homework: command not found
+nina@nina-HP-ProBook-430-G2:~/myproject$ cd Homework
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git init
+Reinitialized existing Git repository in /home/nina/myproject/Homework/.git/
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ls
+README.md  Untitled.py
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Untitled.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git add Untitled.py
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git commit
+[master fa753e0] First commiting from command line
+ 1 file changed, 48 insertions(+)
+ create mode 100644 Untitled.py
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git checkout -b homework-0-commandline
+Switched to a new branch 'homework-0-commandline'
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git branch
+* homework-0-commandline
+  master
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ remote add origin https://github.com/dariader/Homework-0-command-line.git
+remote: command not found
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git remote add origin https://github.com/dariader/Homework-0-command-line.git
+fatal: remote origin already exists.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git push -u origin master
+Username for 'https://github.com': dariader
+Password for 'https://dariader@github.com': 
+To https://github.com/dariader/Homework.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/dariader/Homework.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git push Homework-0-command-line
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+fatal: 'Homework-0-command-line' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ^C
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$  git config --global push.default matching
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git push Homework-0-command-line
+fatal: 'Homework-0-command-line' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git origin push Homework-0-command-line 
+git: 'origin' is not a git command. See 'git --help'.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git origin push Homework-0-command-line 
+git: 'origin' is not a git command. See 'git --help'.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git push git@github.com:git/git.git Homework-0-command-line
+The authenticity of host 'github.com (192.30.253.112)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ $ ssh -vvv git@github.com
+$: command not found
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ssh -vvv git@github.com
+OpenSSH_6.6.1, OpenSSL 1.0.1f 6 Jan 2014
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: Applying options for *
+debug2: ssh_connect: needpriv 0
+debug1: Connecting to github.com [192.30.253.113] port 22.
+debug1: Connection established.
+debug1: identity file /home/nina/.ssh/id_rsa type -1
+debug1: identity file /home/nina/.ssh/id_rsa-cert type -1
+debug1: identity file /home/nina/.ssh/id_dsa type -1
+debug1: identity file /home/nina/.ssh/id_dsa-cert type -1
+debug1: identity file /home/nina/.ssh/id_ecdsa type -1
+debug1: identity file /home/nina/.ssh/id_ecdsa-cert type -1
+debug1: identity file /home/nina/.ssh/id_ed25519 type -1
+debug1: identity file /home/nina/.ssh/id_ed25519-cert type -1
+debug1: Enabling compatibility mode for protocol 2.0
+debug1: Local version string SSH-2.0-OpenSSH_6.6.1p1 Ubuntu-2ubuntu2.10
+debug1: Remote protocol version 2.0, remote software version libssh_0.7.0
+debug1: no match: libssh_0.7.0
+debug2: fd 3 setting O_NONBLOCK
+debug3: load_hostkeys: loading entries for host "github.com" from file "/home/nina/.ssh/known_hosts"
+debug3: load_hostkeys: found key type RSA in file /home/nina/.ssh/known_hosts:6
+debug3: load_hostkeys: loaded 1 keys
+debug3: order_hostkeyalgs: prefer hostkeyalgs: ssh-rsa-cert-v01@openssh.com,ssh-rsa-cert-v00@openssh.com,ssh-rsa
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug2: kex_parse_kexinit: curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+debug2: kex_parse_kexinit: ssh-rsa-cert-v01@openssh.com,ssh-rsa-cert-v00@openssh.com,ssh-rsa,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ssh-ed25519-cert-v01@openssh.com,ssh-dss-cert-v01@openssh.com,ssh-dss-cert-v00@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,ssh-ed25519,ssh-dss
+debug2: kex_parse_kexinit: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+debug2: kex_parse_kexinit: aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se
+debug2: kex_parse_kexinit: hmac-md5-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-ripemd160-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-md5,hmac-sha1,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+debug2: kex_parse_kexinit: hmac-md5-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-ripemd160-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-md5,hmac-sha1,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96
+debug2: kex_parse_kexinit: none,zlib@openssh.com,zlib
+debug2: kex_parse_kexinit: none,zlib@openssh.com,zlib
+debug2: kex_parse_kexinit: 
+debug2: kex_parse_kexinit: 
+debug2: kex_parse_kexinit: first_kex_follows 0 
+debug2: kex_parse_kexinit: reserved 0 
+debug2: kex_parse_kexinit: ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256
+debug2: kex_parse_kexinit: ssh-dss,ssh-rsa
+debug2: kex_parse_kexinit: chacha20-poly1305@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc
+debug2: kex_parse_kexinit: chacha20-poly1305@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc
+debug2: kex_parse_kexinit: hmac-sha2-256,hmac-sha2-512,hmac-sha1
+debug2: kex_parse_kexinit: hmac-sha2-256,hmac-sha2-512,hmac-sha1
+debug2: kex_parse_kexinit: none,zlib,zlib@openssh.com
+debug2: kex_parse_kexinit: none,zlib,zlib@openssh.com
+debug2: kex_parse_kexinit: 
+debug2: kex_parse_kexinit: 
+debug2: kex_parse_kexinit: first_kex_follows 0 
+debug2: kex_parse_kexinit: reserved 0 
+debug2: mac_setup: setup hmac-sha1
+debug1: kex: server->client aes128-ctr hmac-sha1 none
+debug2: mac_setup: setup hmac-sha1
+debug1: kex: client->server aes128-ctr hmac-sha1 none
+debug1: sending SSH2_MSG_KEX_ECDH_INIT
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: Server host key: RSA 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48
+debug3: load_hostkeys: loading entries for host "github.com" from file "/home/nina/.ssh/known_hosts"
+debug3: load_hostkeys: found key type RSA in file /home/nina/.ssh/known_hosts:6
+debug3: load_hostkeys: loaded 1 keys
+debug3: load_hostkeys: loading entries for host "192.30.253.113" from file "/home/nina/.ssh/known_hosts"
+debug3: load_hostkeys: loaded 0 keys
+debug1: Host 'github.com' is known and matches the RSA host key.
+debug1: Found key in /home/nina/.ssh/known_hosts:6
+Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+debug1: ssh_rsa_verify: signature correct
+debug2: kex_derive_keys
+debug2: set_newkeys: mode 1
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug2: set_newkeys: mode 0
+debug1: SSH2_MSG_NEWKEYS received
+debug1: SSH2_MSG_SERVICE_REQUEST sent
+debug2: service_accept: ssh-userauth
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug2: key: /home/nina/.ssh/id_rsa ((nil)),
+debug2: key: /home/nina/.ssh/id_dsa ((nil)),
+debug2: key: /home/nina/.ssh/id_ecdsa ((nil)),
+debug2: key: /home/nina/.ssh/id_ed25519 ((nil)),
+debug1: Authentications that can continue: publickey
+debug3: start over, passed a different list publickey
+debug3: preferred gssapi-keyex,gssapi-with-mic,publickey,keyboard-interactive,password
+debug3: authmethod_lookup publickey
+debug3: remaining preferred: keyboard-interactive,password
+debug3: authmethod_is_enabled publickey
+debug1: Next authentication method: publickey
+debug1: Trying private key: /home/nina/.ssh/id_rsa
+debug3: no such identity: /home/nina/.ssh/id_rsa: No such file or directory
+debug1: Trying private key: /home/nina/.ssh/id_dsa
+debug3: no such identity: /home/nina/.ssh/id_dsa: No such file or directory
+debug1: Trying private key: /home/nina/.ssh/id_ecdsa
+debug3: no such identity: /home/nina/.ssh/id_ecdsa: No such file or directory
+debug1: Trying private key: /home/nina/.ssh/id_ed25519
+debug3: no such identity: /home/nina/.ssh/id_ed25519: No such file or directory
+debug2: we did not send a packet, disable method
+debug1: No more authentication methods to try.
+Permission denied (publickey).
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git@github.com:dariader/Homework-0-command-line.git
+bash: git@github.com:dariader/Homework-0-command-line.git: No such file or directory
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ls -al ~/.ssh
+total 12
+drwx------  2 nina nina 4096 нояб. 24  2015 .
+drwxr-xr-x 74 nina nina 4096 сент. 18 17:44 ..
+-rw-r--r--  1 nina nina 3316 сент. 18 17:50 known_hosts
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ssh-keygen -t rsa -b 4096 -C "dary.spb@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/nina/.ssh/id_rsa): dariader-keygen-ssh
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in dariader-keygen-ssh.
+Your public key has been saved in dariader-keygen-ssh.pub.
+The key fingerprint is:
+ac:01:e4:83:a9:32:e5:e3:7e:f5:f5:bd:b5:33:ae:74 dary.spb@gmail.com
+The key's randomart image is:
++--[ RSA 4096]----+
+|    .            |
+|   =             |
+|  + +            |
+| +   o .         |
+|+ o   . S        |
+|.o .  .o  .      |
+|  .  ... . . o E.|
+| .  .   .   o o+.|
+|  ..         .++o|
++-----------------+
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ eval "$(ssh-agent -s)"
+Agent pid 3723
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ssh-add ~/.ssh/dariader-keygen-ssh
+/home/nina/.ssh/dariader-keygen-ssh: No such file or directory
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ssh-add ~/.ssh/dariader-keygen-ssh.pub
+/home/nina/.ssh/dariader-keygen-ssh.pub: No such file or directory
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ssh-add ~/home/nina/.ssh/id_rsa
+/home/nina/home/nina/.ssh/id_rsa: No such file or directory
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ssh-add ~/home/nina/.ssh/dariader-keygen-ssh.pub
+/home/nina/home/nina/.ssh/dariader-keygen-ssh.pub: No such file or directory
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ssh-add ~/home/nina/.ssh/dariader-keygen-ssh
+/home/nina/home/nina/.ssh/dariader-keygen-ssh: No such file or directory
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ssh-add ~/home/nina/.ssh/id_rsa/dariader-keygen-ssh.pub
+/home/nina/home/nina/.ssh/id_rsa/dariader-keygen-ssh.pub: No such file or directory
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ssh-add dariader-keygen-ssh.pub
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for 'dariader-keygen-ssh.pub' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ xclip -sel clip < dariader-keygen-ssh.pub
+The program 'xclip' is currently not installed. You can install it by typing:
+sudo apt-get install xclip
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ ^C
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ sudo apt-get install xclip
+[sudo] password for nina: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  xclip
+0 upgraded, 1 newly installed, 0 to remove and 202 not upgraded.
+Need to get 17,0 kB of archives.
+After this operation, 72,7 kB of additional disk space will be used.
+Get:1 http://ru.archive.ubuntu.com/ubuntu/ trusty/universe xclip amd64 0.12+svn84-4 [17,0 kB]
+Fetched 17,0 kB in 0s (190 kB/s)
+Selecting previously unselected package xclip.
+(Reading database ... 1594962 files and directories currently installed.)
+Preparing to unpack .../xclip_0.12+svn84-4_amd64.deb ...
+Unpacking xclip (0.12+svn84-4) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up xclip (0.12+svn84-4) ...
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ xclip -sel clip < dariader-keygen-ssh.pub
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git push git@github.com:git/git.git Homework-0-command-line
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git remote add origin https://github.com/dariader/Homework-0-command-line.git
+fatal: remote origin already exists.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git push -u origin master
+Username for 'https://github.com': dariader
+Password for 'https://dariader@github.com': 
+To https://github.com/dariader/Homework.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/dariader/Homework.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git push -u origin homework-0-1
+Username for 'https://github.com': dariader
+Password for 'https://dariader@github.com': 
+error: src refspec homework-0-1 does not match any.
+error: failed to push some refs to 'https://github.com/dariader/Homework.git'
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git remote
+origin
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git push -u origin homework-0-1
+Username for 'https://github.com': dariader
+Password for 'https://dariader@github.com': 
+error: src refspec homework-0-1 does not match any.
+error: failed to push some refs to 'https://github.com/dariader/Homework.git'
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git push -u origin master
+Username for 'https://github.com': dariader
+Password for 'https://dariader@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/dariader/Homework.git/'
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git push -u origin master
+Username for 'https://github.com': dariader
+Password for 'https://dariader@github.com': 
+To https://github.com/dariader/Homework.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/dariader/Homework.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git fetch Homework-0-command-line
+fatal: 'Homework-0-command-line' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty Git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git init 
+Reinitialized existing Git repository in /home/nina/myproject/Homework/.git/
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git init Homework-0-command-line
+Initialized empty Git repository in /home/nina/myproject/Homework/Homework-0-command-line/.git/
+nina@nina-HP-ProBook-430-G2:~/myproject/Homework$ git fetch Homework-0-command-line
+fatal: Couldn't find remote ref HEAD
+fatal: The remote end hung up unexpectedly
